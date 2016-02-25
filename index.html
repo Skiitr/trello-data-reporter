@@ -13,21 +13,34 @@
     <meta property="og:url" content="" />
     <meta property="og:image" content="" />
 
-    <link href='https://fonts.googleapis.com/css?family=Raleway:300,400,500,600' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="main.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:100,400,600' rel='stylesheet' type='text/css'>
+    <!-- <link rel="stylesheet" href="main.min.css"> -->
     <link rel="canonical" href="">
     <link rel="alternate" type="application/rss+xml" title="Trello Data Reporter" href="" />
   </head>
 
   <body>
     <!-- Title Section -->
-    <header></header>
+    <header>
+      <h2 class='site-title'>Trello Data Reporter</h2>
+    </header>
 
     <!-- Meat & Potatoes Section -->
     <main>
-      <section class='section-user'></section>
-      <section class='section-boards'></section>
-      <section class='section-report'></section>
+      <!-- User API Key Authentication Section -->
+      <section class='section-user'>
+        <input class='user-id-input'></input>
+        <button type='submit' name='boardLoad'>Load Boards</button>
+      </section>
+      <!-- Trello Board Selection Section -->
+      <section class='section-boards'>
+        <button type='button' name='dummyButton'>Dummy Board</button>
+        <button type='button' name='dummyButton'>Dummy Board</button>
+        <button type='button' name='dummyButton'>Dummy Board</button>
+      </section>
+      <!-- Board Report Section -->
+      <section class='section-report'>
+      </section>
     </main>
 
     <!-- Notes Section -->
