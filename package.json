@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Skiitr/trello-data-reporter-web#readme",
   "devDependencies": {
+    "browser-sync": "^2.11.1",
     "gulp": "^3.9.1",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.2.0"
