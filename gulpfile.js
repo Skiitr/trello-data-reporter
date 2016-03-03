@@ -11,6 +11,7 @@ var rename = require('gulp-rename')
 var concat = require('gulp-concat')
 var uglify = require('gulp-uglify')
 var autoprefixer = require('gulp-autoprefixer')
+var ghPages = require('gulp-gh-pages')
 
 /* ----DEVELOPMENT TASKS---- */
 
@@ -63,6 +64,11 @@ gulp.task('build', ['clean', 'minifyScripts', 'compileSass'], function () {
   gulp.src(['css/main.css', 'js/app.min.js', 'index.html'], { base: './' })
   .pipe(gulp.dest('dist'))
   browserSync({ server: './dist' })
+})
+
+gulp.task('deploy', function () {
+  gulp.src('./dist/**/*')
+  .pipe(ghPages())
 })
 
 // Default gulp task
