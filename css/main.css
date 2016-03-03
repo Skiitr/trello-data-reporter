@@ -61,3 +61,11 @@ header, main, footer {
 
 footer {
   text-align: center; }
+
+.button-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+/*# sourceMappingURL=main.css.map */
