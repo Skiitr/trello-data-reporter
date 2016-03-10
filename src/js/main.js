@@ -41,6 +41,7 @@ function getBoards () {
   Trello.get('/members/me/boards?filter=open', function (trelloBoards) {
     for (var i = 0; i < trelloBoards.length; i++) {
       var button = createButton(trelloBoards[i].name, trelloBoards[i].id)
+      button.addClass('button-board')
       $('.button-list').append(button)
     }
   })
@@ -64,13 +65,13 @@ function cardReport (cardArray) {
     }
   }
   // Print Report
-  $('.section-report').empty()
-  $('.section-report').append('<p>This board contains ' + cardArray.length + ' cards:</p>')
-  $('.section-report').append('<p>' + closedCards + ' are closed,</p>')
-  $('.section-report').append('<p>' + oneWeek + ' cards closed in the past week,</p>')
-  $('.section-report').append('<p>' + oneMonth + ' cards closed in the past month,</p>')
-  $('.section-report').append('<p>' + lastMonth + ' cards closed the previous month,</p>')
-  $('.section-report').append('<p>' + (cardArray.length - closedCards) + ' remain open.</p>')
+  $('.card-report').empty()
+  .append('<p>This board contains ' + cardArray.length + ' cards:</p>')
+  .append('<p>' + closedCards + ' are closed,</p>')
+  .append('<p>' + oneWeek + ' cards closed in the past week,</p>')
+  .append('<p>' + oneMonth + ' cards closed in the past month,</p>')
+  .append('<p>' + lastMonth + ' cards closed the previous month,</p>')
+  .append('<p>' + (cardArray.length - closedCards) + ' remain open.</p>')
 }
 
 // Extract all cards from a given set of boards with a specific ID

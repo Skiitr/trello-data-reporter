@@ -9,16 +9,64 @@ body {
 }
 
 header, main, footer {
-  padding: 2rem;
-  border: 2px solid $color-font-main;
+  padding: 1rem;
+  border-top: 2px solid $color-font-main;
+  border-left: 2px solid $color-font-main;
+  border-right: 2px solid $color-font-main;
+  @media (min-width: 475px) {
+    padding: 1.5rem;
+  }
+  @media (min-width: 650px) {
+    padding: 2rem;
+  }
 }
 
-.site-title {
+header {
+  border-radius: 25px 25px 0 0;
+}
+
+.site-title, h3 {
   text-align: center;
   font-weight: $header-font-weight;
   font-size: $header-font-size;
 }
 
+h3 {
+  font-size: $header-font-size * 0.7;
+  margin-bottom: 1rem;
+}
+
+.section-boards {
+  border-bottom: 2px solid $color-font-main;
+  padding-bottom: 1rem;
+  @media (min-width: 475px) {
+    padding-bottom: 1.5rem;
+  }
+  @media (min-width: 650px) {
+    padding-bottom: 2rem;
+  }
+}
+
+.section-reports {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 1rem;
+  @media (min-width: 475px) {
+    padding-top: 1.5rem;
+  }
+  @media (min-width: 650px) {
+    padding-top: 2rem;
+  }
+}
+.card-report {
+  p {
+    padding: 0.25rem;
+  }
+}
+
 footer {
   text-align: center;
+  border-bottom: 2px solid $color-font-main;
+  border-radius: 0 0 25px 25px;
 }

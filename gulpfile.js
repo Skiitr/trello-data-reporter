@@ -43,10 +43,12 @@ gulp.task('minifyScripts', ['concatScripts'], function () {
   .pipe(browserSync.reload({ stream: true }))
 })
 
-// Serve the page up with BrowserSync and watch the Sass and HTML for changes
-gulp.task('serve', ['compileSass', 'minifyScripts'], function (cb) {
-  if (cb.err) {}
+gulp.task('runBrowserSync', ['compileSass', 'minifyScripts'], function () {
   browserSync({ server: './' })
+})
+
+// Serve the page up with BrowserSync and watch the Sass and HTML for changes
+gulp.task('serve', ['runBrowserSync'], function () {
   gulp.watch('src/scss/**/*', ['compileSass'])
   gulp.watch('src/js/**/*', ['minifyScripts'])
   gulp.watch('index.html').on('change', browserSync.reload())
