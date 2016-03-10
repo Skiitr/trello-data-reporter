@@ -1,6 +1,6 @@
 {
-  "name": "trello-data-reporter-web",
-  "version": "0.0.1",
+  "name": "trello-data-reporter",
+  "version": "0.1.0",
   "description": "This web application is designed to extract data from a users Trello board and provided statistics on cards and boards.",
   "main": "index.html",
   "scripts": {
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Skiitr/trello-data-reporter-web.git"
+    "url": "git+https://github.com/Skiitr/trello-data-reporter.git"
   },
   "author": "Dan Gallagher",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Skiitr/trello-data-reporter-web/issues"
+    "url": "https://github.com/Skiitr/trello-data-reporter/issues"
   },
-  "homepage": "https://github.com/Skiitr/trello-data-reporter-web#readme",
+  "homepage": "https://github.com/Skiitr/trello-data-reporter#readme",
   "devDependencies": {
     "browser-sync": "^2.11.1",
     "del": "^2.2.0",
