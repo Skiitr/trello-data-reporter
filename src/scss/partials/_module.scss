@@ -8,7 +8,9 @@
 
 // Button item
 .button-board {
-  background: darken($color-background, 5%);
+  background: $color-background-accent;
+  border: none;
+  border-bottom: 3px solid darken($color-background-accent, 15%);
   border-radius: 10px;
   color: $color-font-main;
   font-family: $base-font-family;
@@ -16,4 +18,12 @@
   font-size: $base-font-size;
   margin: 0.5rem;
   padding: 0.75rem;
+  letter-spacing: 1.25px;
+}
+
+.button-board.active {
+  background-color: invert($color-background-accent);
+  color: invert($color-font-main);
+  color: $color-font-accent;
+  box-shadow: 0 0 20px rgba(255,255,255,0.75)
 }

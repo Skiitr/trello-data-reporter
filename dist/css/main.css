@@ -42,19 +42,20 @@ table {
   border-spacing: 0; }
 
 body {
-  background: #7E8987;
-  color: #DDD1C7;
-  font-family: sans-serif;
+  background: #e46b2f;
+  color: #fff;
+  font-family: "Courgette";
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.25;
-  margin: 2rem; }
+  margin: 2rem;
+  letter-spacing: 1.5px; }
 
 header, main, footer {
   padding: 1rem;
-  border-top: 2px solid #DDD1C7;
-  border-left: 2px solid #DDD1C7;
-  border-right: 2px solid #DDD1C7; }
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #fff; }
   @media (min-width: 475px) {
     header, main, footer {
       padding: 1.5rem; } }
@@ -64,6 +65,10 @@ header, main, footer {
 
 header {
   border-radius: 25px 25px 0 0; }
+  header img {
+    display: block;
+    margin: auto;
+    height: 2.625rem; }
 
 .site-title, h3 {
   text-align: center;
@@ -75,7 +80,7 @@ h3 {
   margin-bottom: 1rem; }
 
 .section-boards {
-  border-bottom: 2px solid #DDD1C7;
+  border-bottom: 2px solid #fff;
   padding-bottom: 1rem; }
   @media (min-width: 475px) {
     .section-boards {
@@ -111,8 +116,12 @@ h3 {
 
 footer {
   text-align: center;
-  border-bottom: 2px solid #DDD1C7;
+  border-bottom: 2px solid #fff;
   border-radius: 0 0 25px 25px; }
+  footer a {
+    color: inherit;
+    padding: 0 0.5rem;
+    height: 2rem; }
 
 .button-list {
   display: -webkit-box;
@@ -132,13 +141,22 @@ footer {
           flex-wrap: wrap; }
 
 .button-board {
-  background: #717c7a;
+  background: #8a8a8a;
+  border: none;
+  border-bottom: 3px solid #636363;
   border-radius: 10px;
-  color: #DDD1C7;
-  font-family: sans-serif;
+  color: #fff;
+  font-family: "Courgette";
   font-weight: 400;
   font-size: 1rem;
   margin: 0.5rem;
-  padding: 0.75rem; }
+  padding: 0.75rem;
+  letter-spacing: 1.25px; }
+
+.button-board.active {
+  background-color: #767676;
+  color: black;
+  color: #fff;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.75); }
 
 /*# sourceMappingURL=main.css.map */

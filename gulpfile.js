@@ -51,7 +51,7 @@ gulp.task('runBrowserSync', ['compileSass', 'minifyScripts'], function () {
 gulp.task('serve', ['runBrowserSync'], function () {
   gulp.watch('src/scss/**/*', ['compileSass'])
   gulp.watch('src/js/**/*', ['minifyScripts'])
-  gulp.watch('index.html').on('change', browserSync.reload())
+  gulp.watch('index.html').on('change', browserSync.reload)
 })
 
 /* ----BUILD TASKS---- */
@@ -63,7 +63,7 @@ gulp.task('clean', function () {
 
 // Build task to get files ready for production
 gulp.task('build', ['clean', 'minifyScripts', 'compileSass'], function () {
-  gulp.src(['css/main.css', 'js/app.min.js', 'index.html'], { base: './' })
+  gulp.src(['css/main.css', 'js/app.min.js', 'images/*.**', 'index.html'], { base: './' })
   .pipe(gulp.dest('dist'))
   browserSync({ server: './dist' })
 })

@@ -72,6 +72,7 @@ function cardReport (cardArray) {
   .append('<p>' + oneMonth + ' cards closed in the past month,</p>')
   .append('<p>' + lastMonth + ' cards closed the previous month,</p>')
   .append('<p>' + (cardArray.length - closedCards) + ' remain open.</p>')
+  .hide().slideDown()
 }
 
 // Extract all cards from a given set of boards with a specific ID
@@ -87,4 +88,7 @@ $('body').on('click', 'button', function () {
   extractCards(id)
   // Set the current time
   currentTime = moment()
+  // Make current button active
+  $('button').removeClass('active')
+  $(this).addClass('active')
 })

@@ -6,6 +6,7 @@ body {
   font-size: $base-font-size;
   line-height: $base-line-height;
   margin: 2rem;
+  letter-spacing: 1.5px;
 }
 
 header, main, footer {
@@ -23,6 +24,12 @@ header, main, footer {
 
 header {
   border-radius: 25px 25px 0 0;
+
+  img {
+    display: block;
+    margin: auto;
+    height: $header-font-size * 1.5;
+  }
 }
 
 .site-title, h3 {
@@ -69,4 +76,10 @@ footer {
   text-align: center;
   border-bottom: 2px solid $color-font-main;
   border-radius: 0 0 25px 25px;
+
+  a {
+    color: inherit;
+    padding: 0 0.5rem;
+    height: 2rem;
+  }
 }
